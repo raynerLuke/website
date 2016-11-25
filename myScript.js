@@ -3,6 +3,7 @@ var size ="";
 var text ="";
 var graphic ="";
 var total;
+var discount = "false";
 
 var colourElm = document.createElement("input");
 var sizeElm = document.createElement("input");
@@ -47,6 +48,9 @@ var sub = document.getElementById("submit");
 sub.addEventListener("click", function(event){
     validateForm(event);
 });
+
+//var el = document.getElementById("email");
+//el.addEventListener("blur", checkEmail, false);
 
 function getNewValues(e) 
 {
@@ -119,9 +123,22 @@ function updateForm(setValue, setName, x)
 //if size & colour have not been selected stops form from submiting
 function validateForm(event)
 {
-    if(colour =="" || size =="")
+    if(colour == "" || size == "")
     {
        window.alert("Please select Colour and Size!");
 	   event.preventDefault();
     }
+    checkEmail();
+}
+
+function checkEmail()
+{
+    email = document.getElementById("email").value;
+	if(discount == "false" && email.includes("@mycit.ie"))
+	{
+	    total = total -5;
+		window.alert("mycit.ie discount of $5 has been applied Total is now : $)" + total);
+		discount = "true";
+		displayTotal();
+	}
 }
