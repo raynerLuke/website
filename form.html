@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom t-shirts</title>   
+        <center>
+		    <link rel="stylesheet" type="text/css" href="myStyle.css">
+			<img src ="headerBanner.png" alt ="banner" style="width : 800px;">
+	    </center>
+	</head>
+   
+    <body>
+        <center>
+		    <h1 id="text1">Fully Custom T-shirts</h1>
+		</center>
+		<center>
+		<div class="main">
+		  <form id ="form"  action ="http://atlantis.cit.ie/displayvalues.php" method="post">
+			<fieldset class="menu" style="width : 340px">
+			  <legend>Customize</legend>
+				<div id ="getValues">
+				    Select Colour : <br>
+					<button type="button" name="colour" value="blue">Blue</button>
+				    <button type="button" name="colour" value="red">Red</button>
+				    <button type="button" name ="colour" value="yellow">Yellow</button>
+				    <button type="button" name="colour" value="green">Green</button>
+				    <br><br>
+					
+				    Select Size : <br>
+				    <button type="button" name="size" value="Small">Small</button>
+				    <button type="button" name="size" value="Medium">Medium</button>
+				    <button type="button" name ="size" value="Large">Large</button>
+				    <button type="button" name ="size" value="Extra-large">Extra-Large</button>
+				    <br><br>
+				
+				    Add text to your t-shirts : <br>
+				    <textarea id="customText"></textarea>
+				    <button type="button" name="textRemove" value="Remove">remove</button>
+					<button type="button" name="addText" value="Add">Add Text</button>
+				    <br></br>
+				    
+					Add graphics <br>
+		            <img type="button" class="graphic1" id="graphic1" src="beach_graphics.jpg" name="getGraphic">
+				    <img type="button" class="graphic1" id="graphic2" src="car_graphic.png" name="getGraphic">
+					<img type="button" class="graphic1" id="graphic3" src="surfer_image.jpg" name="getGraphic">
+ 					
+					<button type="button" name="removeGraphic">Remove</button>
+					<button class ="submitbtn" type="submit">submit</button>
+				</div>
+			</fieldset>
+		  </form>
+	     
+		  <div class="container"> 
+		      <h2 id="displayText" class="displayText"></h2>
+		      <img src="" id="addGraphic" class="addGraphic">	  
+	          <img src="tshirt2.png" class="tshirt">
+		  </div>
+		
+		  <div class="items">
+		     Name : 
+			 <input type="text" name="name" required><br>
+			 Email address:
+			 <input type="text"></br>
+			 House no :
+			 <input type="text"><br>
+			 Street:
+			 <input type="text"></br>
+			 city:
+			 <input type="text"><br>
+			 County:
+			 <input type="text"><br>
+			 <p id="total">Total : $</p>
+		  </div>
+	    </div>
+        </center>
+	    
+	    <script type="text/javascript" src="myScript.js"></script>
+	</body>
+</html>

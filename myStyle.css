@@ -1,0 +1,76 @@
+.main
+{
+    position : relative;
+	width : 800px;
+	height : 300px;
+	
+}
+
+.menu
+{
+    position : relative;
+	right : 350px;
+}
+
+.items
+{
+   position : relative;
+   left : 350px;
+   bottom : 500px;
+   background-color : #C7D2D6;
+   height : 250px;
+   width  : 250px;
+}
+
+.submitbtn
+{
+    position : relative;
+    top : 60px;
+	left : 700px;
+	width : 100px;
+	height : 30px;
+}
+
+
+.displayText
+{
+   z-index : 120;
+   position : relative;
+   color : black;
+   top : 80px;
+   width : 60px;
+   height : 10px;
+   right : 40px;
+}
+
+.addGraphic
+{
+    z-index : 100;
+	position : absolute;
+	height : 50px;
+	width : 60px;
+    top : 120px;
+	left : 82px;
+}
+
+.graphic1
+{
+	height : 50px;
+	width : 60px;
+}
+
+.tshirt
+{
+    position : relative;
+	height : 220px;
+	width : 200px;
+	right : 40px;
+}
+
+.container
+{
+	position : relative;
+	width : 300px;
+	height : 200px;
+	bottom : 250px;	
+}
