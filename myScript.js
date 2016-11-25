@@ -38,12 +38,16 @@ function calculateTotal()
 	    total += 14.99;
 	}
 	displayTotal();
-	displayItems();
 }
 
 var par = document.querySelector("#getValues");
 par.addEventListener("click", getNewValues, false);
-    
+
+var sub = document.getElementById("submit");
+sub.addEventListener("click", function(event){
+    validateForm(event);
+});
+
 function getNewValues(e) 
 {
     if (e.target !== e.currentTarget) 
@@ -61,6 +65,7 @@ function formOptions(newValue)
 	{
 	    case "colour":
 		    colour = newValue.value;
+			document.getElementById("tShirt").style.backgroundColor = colour;
 			updateForm(colour, "colour", colourElm);
 		    break;
 	    case "size":
@@ -79,13 +84,15 @@ function formOptions(newValue)
 	        break;
 		case "getGraphic":
 		    document.getElementById("addGraphic").src = newValue.src;
-		    graphic = newValue.id;
+		    document.getElementById("addGraphic").hidden = "";
+			graphic = newValue.id;
 			updateForm(graphic, "Graphic", graphicElm);
 			break;
 		case "removeGraphic":
 		    graphic = "";
 			value = "";
 			document.getElementById("addGraphic").src = "";
+			document.getElementById("addGraphic").hidden = "hidden";
 			document.getElementById("form").removeChild(graphicElm);
 	        break;
 	}
@@ -98,12 +105,7 @@ function displayTotal()
     el.innerHTML = "Total : $" + total;
 }
 
-function displayItems()
-{
-    var el = document.getElementById("selectedItems");
-	el.innerHTML = "Size : "+ size + "<br>" + " Colour : " + colour + "<br>" + " text : " + text + "<br>";	
-}
-
+//updates form values
 function updateForm(setValue, setName, x)
 {    
     x.setAttribute("type", "text");
@@ -111,4 +113,15 @@ function updateForm(setValue, setName, x)
 	x.setAttribute("name", setName);
 	x.setAttribute("hidden", "hidden");
 	document.getElementById("form").appendChild(x);
+}
+
+//accepts the event from listner on submit button
+//if size & colour have not been selected stops form from submiting
+function validateForm(event)
+{
+    if(colour =="" || size =="")
+    {
+       window.alert("Please select Colour and Size!");
+	   event.preventDefault();
+    }
 }
