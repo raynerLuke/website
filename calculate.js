@@ -182,17 +182,29 @@ function validateForm(event)
 //checks email address for mycit.ie and adds discount if this condition is true 
 function checkEmail()
 {
-    email = document.getElementById("email").value;
-	var msg = document.getElementById("discountMessage");
-	if(discount == "false" && email.includes("@mycit.ie"))
+	email = document.getElementById("email").value;
+	
+	if(discount == "false" && email.contains("@mycit.ie"))
 	{
-		msg.value="mycit.ie Discount applied"
-		msg.hidden ="";
+		document.getElementById("discountMsg").value = "mycit.ie Discount applied"
+		document.getElementById("discountMsg").hidden ="";
 		discount = "true";
 	}
-    else if(discount == "true" && !email.includes("@mycit.ie"))
+    else if(discount == "false" && email.includes("@mycit.ie"))
 	{
-		msg.innerHTML ="discount Removed"
+	    document.getElementById("discountMsg").value = "mycit.ie Discount applied"
+		document.getElementById("discountMsg").hidden ="";
+		discount = "true";
+	}
+	
+	else if( discount == "true" && !email.includes("@mycit.ie"))
+	{
+	    document.getElementById("discountMsg").innerHTML ="discount Removed"
+		discount = "false";
+	}
+	else if(discount == "true" && !email.contains("@mycit.ie"))
+	{
+		document.getElementById("discountMsg").innerHTML ="discount Removed"
 		discount = "false";
 	}
     calculateTotal();
