@@ -3,8 +3,8 @@
     <head>
         <title>Custom t-shirts</title>   
         <center>
-		    <link rel="stylesheet" type="text/css" href="myStyle.css">
-			<img src ="headerBanner.png" alt ="banner" style="width : 800px;">
+		    <link rel="stylesheet" type="text/css" href="style.css">
+			<img src ="images/headerBanner.png" alt ="banner" style="width : 800px;">
 	    </center>
 	</head>
    
@@ -18,7 +18,7 @@
 			<fieldset class="menu" style="width : 340px">
 			  <legend>Customize</legend>
 				<div id ="getValues">
-				    <label for="colour" class="label">Select Colour :</label> <br>
+				    <label id="colourText" style= "">Select Colour :</label> <br>
 					<button type="button" class="button bluebtn" name="colour" value="blue">Blue</button>
 				    <button type="button" class="button redbtn" name="colour" value="red">Red</button>
 				    <button type="button" class="button yellowbtn" name ="colour" value="yellow">Yellow</button>
@@ -27,33 +27,33 @@
 				    <button type="button" class="button blackbtn" name="colour" value="black">Black</button>
 				    <br><br>
 					
-				    Select Size : <br>
+				    <label id="sizeText" style="">Select Size :</label><br>
 				    <button type="button" class="button" name="size" value="Small">Small</button>
 				    <button type="button" class="button" name="size" value="Medium">Medium</button>
-				    <button type="button" class="button" name ="size" value="Large">Large</button>
-				    <button type="button" class="button" name ="size" value="Extra-large">Extra-Large</button>
+				    <button type="button" class="button" name="size" value="Large">Large</button>
+				    <button type="button" class="button" name="size" value="Extra-large">Extra-Large</button>
 				    <br><br>
-				
+				     
 				    Add text to your t-shirts :	<br>
 				    Max of five characters can be added
 					<textarea id="customText" maxlength="5"></textarea>
-				    <button type="button" class="button" name="textRemove" value="Remove">remove</button>
-					<button type="button" class="button" name="addText" value="Add">Add Text</button>
-				    <br></br>
+				    <button type="button" class="button1" name="textRemove" value="Remove">remove</button>
+					<button type="button" class="button1" name="addText" value="Add">Add Text</button>
+				    <br><br>
 				    
 					Add graphics <br>
-		            <img type="button" class="graphic1" id="graphic1" src="beach_graphics.jpg" name="getGraphic">
-				    <img type="button" class="graphic1" id="graphic2" src="car_graphic.png" name="getGraphic">
-					<img type="button" class="graphic1" id="graphic3" src="surfer_image.jpg" name="getGraphic">
+		            <img type="button" class="graphic1" id="graphic1" src="images/beach_graphics.jpg" name="getGraphic">
+				    <img type="button" class="graphic1" id="graphic2" src="images/car_graphic.png" name="getGraphic">
+					<img type="button" class="graphic1" id="graphic3" src="images/surfer_image.jpg" name="getGraphic">
  					
-					<button class="button" type="button" name="removeGraphic">Remove</button>
+					<button class="button1" type="button" name="removeGraphic">Remove</button>
 				</div>
 			</fieldset>
 	     
 		    <div class="container"> 
 		       <h2 id="displayText" class="displayText"></h2>
 		       <img hidden="hidden" src="" id="addGraphic" class="addGraphic">	  
-	           <img id="tShirt" src="tshirt2.png" style="" class="tshirt">
+	           <img id="tShirt" src="images/tshirt2.png" style="" class="tshirt">
 		    </div>
 		
 		    <div id="custDetails" class="cust_details">
@@ -62,29 +62,38 @@
 			   <br>
 			   <label for "emailAddress">Email address:</label>
 			   <input type="email" value="" id="email" name="Email address" required>
-			   </br>
+			   
 			   <label for="houseNo">House No : </label>
 			   <input type="text" value= "" id="houseNo" name="house Number" required>
 			   <br>
 			   <label for "street">Street : </label>
 			   <input type="text" value="" id="street" name="street" required>
 			   </br>
-			   <label for="Town">City: </label>
+			   <label for="Town">Town: </label>
 			   <input type="text" value="" id="Town" name="Town" required>
 			   <br>
-			   <label for "County">County</label>
+			   <label for "County">County :</label>
 			   <input type="text" value="" id="County" name="County" required>
-			    
-				<p id="total">Total : $</p>
+			   <br>
+			   <label for="contactNo">Contact No :</label>
+			   <input type="number" value="" id="contactNo" name="contactNo" required>
 			   </br>
-		
 		    </div>
-	        
-			<button class ="submitbtn" id="submit" type="submit">submit</button>
-		  </form>
+			
+			<div class="total"> 
+			  <p id="total">Total : $</p>
+			  <button class ="submitbtn" id="submit" type="submit">submit</button>
+		    </div>
+		    <div class="errormsgContainer">
+			  <p id ="errorMessage" hidden="hidden" class="errormsg">contact number Must be 10 numbers</p> 
+			  <p id="colourError" hidden="hidden" class="errormsg">please select Colour</p>
+			  <p id="sizeError" hidden="hidden" class="errormsg">Please select Size</p>
+			  <p id="discountMessage" hidden="hidden" class="discountmsg" value="">Mycit.ie discount applied</p> 
+			</div>
+		 </form>
 		</div>
         </center>
 	    
-	    <script type="text/javascript" src="myScript.js"></script>
+	    <script type="text/javascript" src="calculate.js"></script>
 	</body>
 </html>
