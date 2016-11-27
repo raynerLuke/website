@@ -1,0 +1,162 @@
+.main{
+    position : relative;
+	width : 800px;
+	height : 300px;
+    border : soli 1px black;
+}
+
+.menu{
+    position : relative;
+	right : 350px;
+}
+
+.button{
+    background-color: #C7D2D6;
+	color: black;
+    padding: 9px;
+	text-align: center;
+	font-size: 9px;
+	margin: 2px 2px;
+}
+
+.button1{
+    background-color: #C7D2D6;
+	color: black;
+    padding: 9px;
+	text-align: center;
+	font-size: 9px;
+	margin: 1px 1px;
+	position : relative;
+	bottom : 12px;
+}
+
+.greenbtn {background-color: green; color: white;} 
+.bluebtn {background-color: blue; color: white;} 
+.redbtn {background-color: #f44336; color: white;}
+.whitebtn {background-color: #e7e7e7; color: black;}
+.blackbtn {background-color: #555555; color : white;} 
+.yellowbtn{background-color: yellow; color: black;}
+
+.cust_details{
+   position : relative;
+   left : 450px;
+   bottom : 650px;
+   background-color : #C7D2D6;
+   height : 418px;
+   width  : 280px;
+   border : 1px solid black;
+   padding: 8px 10px;
+}
+
+input[type=text], select{
+    width: 100%;
+    padding : 10px 15px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=email], select{
+    width: 100%;
+    padding : 10px 15px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=number], select{
+    width: 100%;
+    padding : 10px 15px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.errormsgContainer{
+	position : relative;
+    bottom : 640px;
+	left : 450px;
+	height : 100px;
+	width : 300px;
+	height : 40px;
+}
+
+.submitbtn{
+    background-color : green;
+	position : relative;
+	width : 145px;
+	height : 45px;
+	left : 153px;
+	bottom : 54px;
+}
+
+.total{
+	background-color : #C7D2D6;
+	position : relative;
+    bottom : 640px;
+	left : 375px;
+	width : 150px;
+	height : 40px;
+	border : 1px solid black
+}
+.displayText{
+   z-index : 120;
+   position : relative;
+   color : black;
+   top : 80px;
+   width : 60px;
+   height : 10px;
+   right : 40px;
+}
+
+.addGraphic{
+    z-index : 100;
+	position : absolute;
+	height : 50px;
+	width : 60px;
+    top : 120px;
+	left : 82px;
+}
+
+.graphic1{
+	height : 50px;
+	width : 60px;
+}
+
+.tshirt{
+    position : relative;
+	height : 220px;
+	width : 200px;
+	right : 40px;
+}
+
+.container{
+	position : relative;
+	width : 300px;
+	height : 200px;
+	bottom : 350px;	
+	left : 100px	
+}
+
+input:focus{
+    border: 1px solid red;
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+.label{
+   text-align : left-side;
+}
+
+.errormsg{
+	width : 200px;
+    padding : 10px 15px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	border : 2px solid red;
+	color : red;
+}
